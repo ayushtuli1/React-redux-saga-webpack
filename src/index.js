@@ -1,18 +1,18 @@
-import React from "react";
 import "babel-polyfill";
-import ReactDOM from "react-dom";
-import { createStore, applyMiddleware } from "redux";
-import { Provider } from "react-redux";
-import { routerMiddleware } from "react-router-redux";
-import createSagaMiddleware from "redux-saga";
-import { AppContainer } from "react-hot-loader";
-import createHistory from "history/createBrowserHistory";
 import "react-hot-loader/patch";
 
-import App from "./App/Appcontainer";
-import rootReducer from "./App/app.root.reducer";
+import { applyMiddleware, createStore } from "redux";
 
+import App from "./App/Appcontainer";
+import { AppContainer } from "react-hot-loader";
+import { Provider } from "react-redux";
+import React from "react";
+import ReactDOM from "react-dom";
+import createHistory from "history/createBrowserHistory";
+import createSagaMiddleware from "redux-saga";
+import rootReducer from "./App/app.root.reducer";
 import rootSaga from "./App/app.root.saga";
+import { routerMiddleware } from "react-router-redux";
 
 const history = createHistory();
 const historyMiddleware = routerMiddleware(history);
